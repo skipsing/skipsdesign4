@@ -1,0 +1,578 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Kraftgang &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'kraftgang';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Skipsdesign IV - Skrogkonstruksjon
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="globale-krefter.html">Globale lastpåvirkninger</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fkraftgang.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/kraftgang.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Kraftgang</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kreftene-som-virker-pa-et-skip">Kreftene som virker på et skip</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hydrostatisk-trykk">Hydrostatisk trykk</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hydrodynamisk-trykk">Hydrodynamisk trykk</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kreftenes-distribusjon-og-overforing-til-skipskonstruksjonen">Kreftenes distribusjon og overføring til skipskonstruksjonen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plate">Plate</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#statisk-system">Statisk system</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oving-regne-ut-netto-oppdrift-for-en-lekter-kontrollere-summen-av-kreftene-i-horisontal-retning">Øving regne ut netto oppdrift for en lekter . Kontrollere summen av kreftene i horisontal retning.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eksempel-trykk-pa-bunnen">Eksempel trykk på bunnen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eksempel-dykker-under-bolge">Eksempel dykker under bølge</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="kraftgang">
+<h1>Kraftgang<a class="headerlink" href="#kraftgang" title="Permalink to this heading">#</a></h1>
+<p style="text-align:center;">
+    ✍️ Lars Erik Nygård  <a href="mailto:lars.e.nygard@ntnu.no">📧</a> 17.02.2024 📅 
+</p>
+<section id="kreftene-som-virker-pa-et-skip">
+<h2>Kreftene som virker på et skip<a class="headerlink" href="#kreftene-som-virker-pa-et-skip" title="Permalink to this heading">#</a></h2>
+<p>Først skal vi på et overordnet nivå se på hvilke krefter som virker på et skip. Her er generelt trykkkrefter relevant. Vi har fra tidligere regnet ut dypgangen <span class="math notranslate nohighlight">\(T\)</span> som angir
+hvor mange meter skipet er neddykket i den omkringliggende væsken.</p>
+<section id="hydrostatisk-trykk">
+<h3>Hydrostatisk trykk<a class="headerlink" href="#hydrostatisk-trykk" title="Permalink to this heading">#</a></h3>
+<p>Trykket som virker på skroget fra væsken kalles <em>hyrostatisk trykk</em>. I ordet <em>statisk</em> forstår en at det er XXX</p>
+<p>Trykket er gitt som:
+$<span class="math notranslate nohighlight">\( P = \rho \times g \times h \)</span>$</p>
+<p>og der
+$<span class="math notranslate nohighlight">\( P = \text{Det hydrostatiske trykket i } [\frac{N}{m^2}] \)</span>$</p>
+<div class="math notranslate nohighlight">
+\[ \rho = \text{tettheten i væsken i } [\frac{kg}{m^3}] \]</div>
+<div class="math notranslate nohighlight">
+\[ g = \text{gravitasjonskonstanten } [9.81 \frac{m}{s^2}] \]</div>
+<div class="math notranslate nohighlight">
+\[ h = \text{Avstand fra væskeoverflaten i [m]}  \]</div>
+</section>
+<section id="hydrodynamisk-trykk">
+<h3>Hydrodynamisk trykk<a class="headerlink" href="#hydrodynamisk-trykk" title="Permalink to this heading">#</a></h3>
+<p>Lokale trykkforskjeller på grunn av bølgeheving. Lokal økning av avstanden til væskeoverflaten. <em>rullebevegelse</em> vil føre til lokalt større dypgang i bunn ute ved sidene</p>
+<p>Dykkere utligner trykket inne hodet da trommehninnene vil brist ved store trykkforskjeller. Redningselskapet har dykkere ombord som kan fjerne tau og fiskebruk fra propellen på fiskebåter. De er spesielt påpasselige med at dønningene ikke må være for store da det variable (dynamiske) trykket kan variere så raskt at trommehinnene sprenges.</p>
+</section>
+<section id="kreftenes-distribusjon-og-overforing-til-skipskonstruksjonen">
+<h3>Kreftenes distribusjon og overføring til skipskonstruksjonen<a class="headerlink" href="#kreftenes-distribusjon-og-overforing-til-skipskonstruksjonen" title="Permalink to this heading">#</a></h3>
+<p>Den generelle distribusjon og overføring til skipskonstruksjoner kalles <em>kraftgangen</em> og er for generelle trykk bygd opp hierarktisk etter konstruksjonselementenes funksjon:</p>
+<div class="math notranslate nohighlight">
+\[ \text{Plate} \rightarrow \text{Stiver} \rightarrow \text{Bærer} \]</div>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/images/kraftgang-med-forklaring.PNG"><img alt="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/images/kraftgang-med-forklaring.PNG" src="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/images/kraftgang-med-forklaring.PNG" /></a>
+<figcaption>
+<p><span class="caption-text">Kraftgang i en typisk skipskonstruksjon som er bygd opp av plate - stiver - bærer system.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="_images/kraftgang-med-forklaring.PNG"><img alt="_images/kraftgang-med-forklaring.PNG" src="_images/kraftgang-med-forklaring.PNG" style="width: 630.5px; height: 372.5px;" /></a>
+<figcaption>
+<p><span class="caption-text">Kraftgang i en typisk skipskonstruksjon som er bygd opp av plate - stiver - bærer system.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="plate">
+<h3>Plate<a class="headerlink" href="#plate" title="Permalink to this heading">#</a></h3>
+<p>For platen som dekker utsiden av skroget kalles også <em>hud</em>platen. Strukturens topologi angir her størrelsen på hvert <em>platefelt</em> . Platens primære funskjon er altså å være <em>vanntett</em> - ikke slippe vannet gjennom, og kunne motstå trykket <span class="math notranslate nohighlight">\(P\)</span> som virker fra utsiden, og normalt på flaten. Et <em>platefelt</em> er inndelt etter følgende:</p>
+<div class="math notranslate nohighlight">
+\[ s = \text{stiveravstand} \]</div>
+<div class="math notranslate nohighlight">
+\[ l = \text{webrammeavstand } \]</div>
+<p>og der <span class="math notranslate nohighlight">\( s &lt; l \)</span></p>
+<p>Stiveravstanden må her ikke forveksles med <em>spanteavstanden</em>.</p>
+<p>Trykket på platefeltet antas å virker jevnt fordelt over platen. Trykket vil da velge korteste vei til platens <em>opplager</em> som i dette tilfellet er stiverne på hver langside.</p>
+<section id="statisk-system">
+<h4>Statisk system<a class="headerlink" href="#statisk-system" title="Permalink to this heading">#</a></h4>
+<p>Vi kan betrakte en liten vilkårlig platestripe orientert på tverrs av platen. Det statiske systemet for denne stripen vil være en jevnt fordelt last</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/images/platestripe.PNG"><img alt="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/images/platestripe.PNG" src="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/images/platestripe.PNG" /></a>
+<figcaption>
+<p><span class="caption-text">Platestripe med bredden <span class="math notranslate nohighlight">\(b\)</span></span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="_images/platestripe.PNG"><img alt="_images/platestripe.PNG" src="_images/platestripe.PNG" style="width: 354.5px; height: 200.5px;" /></a>
+<figcaption>
+<p><span class="caption-text">Platestripe med bredden <span class="math notranslate nohighlight">\(b\)</span>, ref ASOL bok</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+<section id="oving-regne-ut-netto-oppdrift-for-en-lekter-kontrollere-summen-av-kreftene-i-horisontal-retning">
+<h2>Øving regne ut netto oppdrift for en lekter . Kontrollere summen av kreftene i horisontal retning.<a class="headerlink" href="#oving-regne-ut-netto-oppdrift-for-en-lekter-kontrollere-summen-av-kreftene-i-horisontal-retning" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="eksempel-trykk-pa-bunnen">
+<h2>Eksempel trykk på bunnen<a class="headerlink" href="#eksempel-trykk-pa-bunnen" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="eksempel-dykker-under-bolge">
+<h2>Eksempel dykker under bølge<a class="headerlink" href="#eksempel-dykker-under-bolge" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kreftene-som-virker-pa-et-skip">Kreftene som virker på et skip</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hydrostatisk-trykk">Hydrostatisk trykk</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hydrodynamisk-trykk">Hydrodynamisk trykk</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kreftenes-distribusjon-og-overforing-til-skipskonstruksjonen">Kreftenes distribusjon og overføring til skipskonstruksjonen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plate">Plate</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#statisk-system">Statisk system</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oving-regne-ut-netto-oppdrift-for-en-lekter-kontrollere-summen-av-kreftene-i-horisontal-retning">Øving regne ut netto oppdrift for en lekter . Kontrollere summen av kreftene i horisontal retning.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eksempel-trykk-pa-bunnen">Eksempel trykk på bunnen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eksempel-dykker-under-bolge">Eksempel dykker under bølge</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

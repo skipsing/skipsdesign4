@@ -45,14 +45,6 @@ align: center
 Kraftgang i en typisk skipskonstruksjon som er bygd opp av plate - stiver - bærer system. 
 ```
 
-```{figure} ./images/kraftgang-med-forklaring.PNG
----
-scale: 50 %
-align: center
---- 
-Kraftgang i en typisk skipskonstruksjon som er bygd opp av plate - stiver - bærer system. 
-```
-
 ### Plate
 For platen som dekker utsiden av skroget kalles også *hud*platen. Strukturens topologi angir her størrelsen på hvert *platefelt* . Platens primære funskjon er altså å være *vanntett* - ikke slippe vannet gjennom, og kunne motstå trykket $P$ som virker fra utsiden, og normalt på flaten. Et *platefelt* er inndelt etter følgende: 
 
@@ -78,15 +70,6 @@ align: center
 Platestripe med bredden $b$ 
 ```
 
-```{figure} ./images/platestripe.PNG
----
-scale: 50 %
-align: center
---- 
-Platestripe med bredden $b$, ref ASOL bok 
-```
-
-
 ## Øving regne ut netto oppdrift for en lekter . Kontrollere summen av kreftene i horisontal retning. 
 
 
@@ -98,8 +81,5 @@ Platestripe med bredden $b$, ref ASOL bok
 ## Eksempel dykker under bølge 
 
 
-```{figure} path/to/image
-caption
-```
 
 

@@ -4,5 +4,8 @@
 format: jb-book
 root: intro
 chapters:
+- file: intro
+- file: skrogkonstruksjoner
+- file: kraftgang
 - file: globale-krefter
 

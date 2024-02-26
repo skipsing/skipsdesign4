@@ -1,0 +1,29 @@
+********************************
+build book
+jupyter-book build ../skipsdesign2
+
+push book to pg pages
+ghp-import -n -p -f _build/html
+
+
+Signatur for bruk
+
+<p style="text-align:center;">
+    ✍️ Lars Erik Nygård  <a href="mailto:lars.e.nygard@ntnu.no">📧</a> 08.02.2024 📅 
+</p>
+
+***************************************
+
+- ha med et kapittel for hver av styrkekomponentene
+
+Platen - hvilke tykkelser finnes det? 
+Materialparametere
+
+Regelverk. 
+
+- Stivere 
+Hvilke tverrsnitt finnes det. 
+
+- Bærere 
+T profil og påsveist L. 
+

@@ -58,6 +58,33 @@ Der $C$ er en koeffisient som sier noe om platefeltets aspektforhold og spenning
 
 Denne er ofte også benevnt *bulekoeffisienten*. $\nu$ er [*Poisson's ratio*](https://en.wikipedia.org/wiki/Poisson%27s_ratio), eller også kalt *tverrkontrakssjonstallet*. For stål er $\nu = 0.3 $.
 
+Vi står da igjen med følgende uttrykk for Eulerspenning $ \sigma_{Euler} $ i et uavstivet platefelt:
+<br>
+<br>
+$$ \sigma_{Euler} = \frac{ C }{1-\nu^2 } \times \frac{\pi^2 \times E}{12} \times (\frac{t}{s})^2 $$
+<br>
+<br>
+### Johnson-Ostenfeld korreksjon 
+
+Der slankhetsforholdet (lengde over stivhet) blir svært høyt er man nødt til å introdusere "Johnson-Ostenfelds korreksjonsfaktor". I figur under ser en at denne korreksjonsfaktoren interpolerer mellom flytspenningen og Eulerspenningen. 
+
+```{figure} https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/johnson-ostenfeld-korreksjon.PNG
+---
+scale: 50 %
+align: center
+--- 
+Johnson-Ostenfeld korreksjon for høye *slankhetsforhold*
+```
+
+En ser fra figur over at denne korreksjonen inntreffer **kun** om $\sigma_{Euler} > 0.5\times \sigma_{flyt}
+$. 
+
+Det gir følgende korreksjon:
+
+$$ \sigma_{kr} = \sigma_{Euler}  \textrm{  når  } \sigma_{Euler} \le  \frac{\sigma_{flyt}}{2}   $$
+<br>
+
+$$ \sigma_{kr} = \sigma_{flyt} \times (1-\frac{\sigma_{flyt}}{4 \times\sigma_{Euler} })  \textrm{  når  } \sigma_{Euler} \ge  \frac{\sigma_{flyt}}{2}   $$
 
 ```{admonition} Prosedyre for bulekontroll av uavstivet platefelt 
 :class: tip

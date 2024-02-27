@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Platebuling &#8212; Skipsdesign IV</title>
+    <title>Plotting av bulekoeffisienten \(C\) &#8212; Skipsdesign IV</title>
   
   
   
@@ -63,7 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'knekking-buling/platebuling';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ressurser/bulekoeffisient';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -232,7 +232,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/skipsing/skipsdesign4/issues/new?title=Issue%20on%20page%20%2Fknekking-buling/platebuling.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/skipsing/skipsdesign4/issues/new?title=Issue%20on%20page%20%2Fressurser/bulekoeffisient.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -262,7 +262,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/knekking-buling/platebuling.md" target="_blank"
+      <li><a href="../_sources/ressurser/bulekoeffisient.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -272,7 +272,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -344,7 +344,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Platebuling</h1>
+    <h1>Plotting av bulekoeffisienten C</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -354,17 +354,19 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bakgrunn">Bakgrunn</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teori">Teori</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#platestripe-som-ekvivalent-bjelke">Platestripe som ekvivalent bjelke</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eulerspenning">Eulerspenning</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#johnson-ostenfeld-korreksjon">Johnson-Ostenfeld korreksjon</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#losningsforslag">Løsningsforslag</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Plotting av <em>bulekoeffisienten</em> <span class="math notranslate nohighlight">\(C\)</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spenningsretning-langs-plateretningen">Spenningsretning langs plateretningen</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sett-inn-link-til-bulekoeffsientarket">Sett inn link til bulekoeffsientarket</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klarifisering-beregning-a-bulekoeffisient-c">KLARIFISERING: Beregning a bulekoeffisient <span class="math notranslate nohighlight">\(C\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sigma-1-skal-alltid-vaere-storste-trykkspenning-som-er-beregnet"><span class="math notranslate nohighlight">\(\sigma_1\)</span> skal alltid være <em>største</em> trykkspenning som er beregnet.</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
+
             </nav>
         </div>
     </div>
@@ -375,127 +377,89 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="platebuling">
-<h1>Platebuling<a class="headerlink" href="#platebuling" title="Permalink to this heading">#</a></h1>
-<p style="text-align:center;">
-    ✍️ Lars Erik Nygård  <a href="mailto:lars.e.nygard@ntnu.no">📧</a> 27.02.2024 📅 
-</p>
-<section id="bakgrunn">
-<h2>Bakgrunn<a class="headerlink" href="#bakgrunn" title="Permalink to this heading">#</a></h2>
-<p>Skipskrog er bygd opp av slanke <em>skallkonstruksjoner</em> som ofte viser seg å være kritiske for stabilitet og platebuling. Kunnskap om buleteori og kjennskap til hensiktsmessige designgrep for å unngå buling er viktige ferdigheter for skipsingenører.</p>
-</section>
-<section id="teori">
-<h2>Teori<a class="headerlink" href="#teori" title="Permalink to this heading">#</a></h2>
-<p>Vi har fra tidligere sett at kritisk <em>knekklast</em> på en aksialt trykkbelastet bjelke er definert som:</p>
-<div class="math notranslate nohighlight">
-\[ P_{kr}= \frac{\pi^2 \times E \times I }{L^2} \]</div>
-<p>Vi skal nå se på tilsvarende knekkingsfenomen for et platefelt. Ut fra skipets <em>topologi</em> så vil størrelsen på et uavstivet platefelt være bestemt av spanteavstanden (<span class="math notranslate nohighlight">\(s\)</span>), og webrammeavstanden (<span class="math notranslate nohighlight">\(l\)</span>).</p>
-<figure class="align-center" id="id1">
-<a class="reference internal image-reference" href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/platefelt-del-av-skip.PNG"><img alt="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/platefelt-del-av-skip.PNG" src="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/platefelt-del-av-skip.PNG" /></a>
-<figcaption>
-<p><span class="caption-text">Uavstivet platefelt som del av en større skrogkonstruksjon</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<section id="platestripe-som-ekvivalent-bjelke">
-<h3>Platestripe som ekvivalent bjelke<a class="headerlink" href="#platestripe-som-ekvivalent-bjelke" title="Permalink to this heading">#</a></h3>
-<p>I platefeltet over så tar vi ut en liten platestripe med bredde <span class="math notranslate nohighlight">\(b\)</span> (markert i rødt over). Platestripen betrakter vi som en søyle og anvender knekklastformelen for som for bjelker <span class="math notranslate nohighlight">\(P_{kr}\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[ P_{kr} = \frac{\pi^2 \times E \times (\frac{b \times t^3}{12}) }{s^2} \]</div>
-<p>Annet arealmoment for det sammensatte bjelkesnittet (<span class="math notranslate nohighlight">\(I\)</span>) er her erstattet med annet arealmoment for en rektangulær plate <span class="math notranslate nohighlight">\((\frac{b \times t^3}{12})\)</span> der høyde er <span class="math notranslate nohighlight">\(b\)</span> og tykkelse er <span class="math notranslate nohighlight">\(t\)</span>. Videre er lengden <span class="math notranslate nohighlight">\(L\)</span> erstattet med <span class="math notranslate nohighlight">\(s\)</span>,
-se figur under. <br></p>
-<figure class="align-center" id="id2">
-<a class="reference internal image-reference" href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/platestripe-ekvivalent-bjelke.PNG"><img alt="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/platestripe-ekvivalent-bjelke.PNG" src="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/platestripe-ekvivalent-bjelke.PNG" /></a>
-<figcaption>
-<p><span class="caption-text">Platestripe med bredde <em>b</em> som ekvivalent bjelke</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="eulerspenning">
-<h3>Eulerspenning<a class="headerlink" href="#eulerspenning" title="Permalink to this heading">#</a></h3>
-<p>Eulerspenningen beregnes videre som knekklast delt på areal:</p>
-<div class="math notranslate nohighlight">
-\[ \sigma_{Euler} = \frac{P_{Kr}}{A} = \frac{\pi^2 \times E \times (\frac{b \times t^3}{12}) }{(b \times t) \times s^2} \]</div>
-<div class="math notranslate nohighlight">
-\[ \downarrow \]</div>
-<div class="math notranslate nohighlight">
-\[ \sigma_{Euler} = \frac{\pi^2 \times E}{12} \times (\frac{t}{s})^2 \]</div>
-<p>For tilfellene der platen er opplagret langs kantene (som den ofte er) så korrigeres det på samme måte som for bjelker med effektive knekklengder, men her inkluderes også spenningsvariasjon over platefeltet.</p>
-<div class="math notranslate nohighlight">
-\[ \frac{ C }{1-\nu^2 } \]</div>
-<p>Der <span class="math notranslate nohighlight">\(C\)</span> er en koeffisient som sier noe om platefeltets aspektforhold og spenningsbilde.</p>
-<p>Denne er ofte også benevnt <em>bulekoeffisienten</em>. <span class="math notranslate nohighlight">\(\nu\)</span> er <a class="reference external" href="https://en.wikipedia.org/wiki/Poisson%27s_ratio"><em>Poisson’s ratio</em></a>, eller også kalt <em>tverrkontrakssjonstallet</em>. For stål er <span class="math notranslate nohighlight">\(\nu = 0.3 \)</span>.</p>
-<p>Vi står da igjen med følgende uttrykk for Eulerspenning <span class="math notranslate nohighlight">\( \sigma_{Euler} \)</span> i et uavstivet platefelt:
-<br>
-<br>
-$<span class="math notranslate nohighlight">\( \sigma_{Euler} = \frac{ C }{1-\nu^2 } \times \frac{\pi^2 \times E}{12} \times (\frac{t}{s})^2 \)</span>$
-<br>
-<br></p>
-</section>
-<section id="johnson-ostenfeld-korreksjon">
-<h3>Johnson-Ostenfeld korreksjon<a class="headerlink" href="#johnson-ostenfeld-korreksjon" title="Permalink to this heading">#</a></h3>
-<p>Der slankhetsforholdet (lengde over stivhet) blir svært høyt er man nødt til å introdusere “Johnson-Ostenfelds korreksjonsfaktor”. I figur under ser en at denne korreksjonsfaktoren interpolerer mellom flytspenningen og Eulerspenningen.</p>
-<figure class="align-center" id="id3">
-<a class="reference internal image-reference" href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/johnson-ostenfeld-korreksjon.PNG"><img alt="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/johnson-ostenfeld-korreksjon.PNG" src="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/johnson-ostenfeld-korreksjon.PNG" /></a>
-<figcaption>
-<p><span class="caption-text">Johnson-Ostenfeld korreksjon for høye <em>slankhetsforhold</em></span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>En ser fra figur over at denne korreksjonen inntreffer <strong>kun</strong> om <span class="math notranslate nohighlight">\(\sigma_{Euler} &gt; 0.5\times \sigma_{flyt}
-\)</span>.</p>
-<p>Det gir følgende korreksjon:</p>
-<div class="math notranslate nohighlight">
-\[ \sigma_{kr} = \sigma_{Euler}  \textrm{  når  } \sigma_{Euler} \le  \frac{\sigma_{flyt}}{2}   \]</div>
-<br>
-<div class="math notranslate nohighlight">
-\[ \sigma_{kr} = \sigma_{flyt} \times (1-\frac{\sigma_{flyt}}{4 \times\sigma_{Euler} })  \textrm{  når  } \sigma_{Euler} \ge  \frac{\sigma_{flyt}}{2}   \]</div>
-<div class="tip admonition">
-<p class="admonition-title">Prosedyre for bulekontroll av uavstivet platefelt </p>
+  <section class="tex2jax_ignore mathjax_ignore" id="plotting-av-bulekoeffisienten-c">
+<h1>Plotting av <em>bulekoeffisienten</em> <span class="math notranslate nohighlight">\(C\)</span><a class="headerlink" href="#plotting-av-bulekoeffisienten-c" title="Permalink to this heading">#</a></h1>
+<p>I denne notebooken skal vi beregne og plotte bulekoeffisienten <span class="math notranslate nohighlight">\(C\)</span> for tilfellene der spenningsretningen er langs platefeltet og på tverrs av platefeltet.<br />
+Vi skal her benytte oss av to biblioteker som ikke er del av standardbiblioteket til Python:</p>
 <ul class="simple">
-<li><p>Identifiser bulekoeffienttilfelle basert på topologi og spenningsretning</p></li>
-<li><p>Beregn spenningsvariasjonen <span class="math notranslate nohighlight">\(\psi\)</span>.</p></li>
-<li><p>Beregn tilhørende bulekoeffisient <span class="math notranslate nohighlight">\(C\)</span>.</p></li>
-<li><p>Beregn <span class="math notranslate nohighlight">\(\sigma_{Euler}\)</span> gitt aspektforhold (<span class="math notranslate nohighlight">\(\frac{t}{s}\)</span>) og materialparameterene ( <span class="math notranslate nohighlight">\(E\)</span> og <span class="math notranslate nohighlight">\(\nu\)</span> )</p></li>
-<li><p>korriger (eventuelt) <span class="math notranslate nohighlight">\(\sigma_{kr}\)</span> for Johnson Ostenfeld korreksjonsfaktoren</p></li>
-<li><p>platen vil ikke bule om <span class="math notranslate nohighlight">\(\sigma_{kr} \ge \sigma_{max}\)</span></p></li>
+<li><p>Numpy. Denne skal hjelpe oss å lage et intervall av punkter for <span class="math notranslate nohighlight">\(\phi\)</span></p></li>
+<li><p>Matplotlib. Standard plottebibliotek som skal hjelpe oss å lage presentable plot av <span class="math notranslate nohighlight">\(C\)</span></p></li>
 </ul>
-</div>
-<p>Vi benytter anledningen til å vise et regneeksempel der prosedyren over er brukt.</p>
-<div class="note admonition">
-<p class="admonition-title">Regneeksempel</p>
-<p>Vi skal kontrollere platefeltet som skissert under for buling. Platefeltet er belastet med en varierende trykkspenning langs kortsiden.</p>
-<figure class="align-center" id="id4">
-<a class="reference internal image-reference" href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/eksempel-platebuling.PNG"><img alt="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/eksempel-platebuling.PNG" src="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/eksempel-platebuling.PNG" /></a>
-<figcaption>
-<p><span class="caption-text">uavstivet platefelt utsatt for lineært varierende trykkspenning langs kortsiden</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</div>
-<p>Videre er følgende opplysinger gitt:</p>
-<div class="math notranslate nohighlight">
-\[ E_{modul} = 210 000 \frac{N}{mm^2} \]</div>
-<div class="math notranslate nohighlight">
-\[ \sigma_{flyt} = 235 \frac{N}{mm^2} \]</div>
-<section id="losningsforslag">
-<h4>Løsningsforslag<a class="headerlink" href="#losningsforslag" title="Permalink to this heading">#</a></h4>
-<p>En ser her at  <span class="math notranslate nohighlight">\(\sigma_{2} = 0\frac{N}{mm^2}\)</span>, og <span class="math notranslate nohighlight">\(\psi\)</span> blir dermed også <span class="math notranslate nohighlight">\(0\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[ \downarrow \]</div>
-<p>Dette er et tilfelle a), og som gir bulekoeffisient:</p>
-<div class="math notranslate nohighlight">
-\[ C = \frac{8.4}{0 + 1.1} = 7.63 \]</div>
-<p>Beregner videre Eulerspenningen;
-$<span class="math notranslate nohighlight">\( \sigma_{Euler} = \frac{ 7.63 }{1-0.3^2 } \times \frac{\pi^2 \times 210 000\frac{N}{mm^2}}{12} \times (\frac{8mm}{600mm})^2 = 257.4\frac{N}{mm^2} \)</span>$</p>
-<p>En ser her at <span class="math notranslate nohighlight">\(\sigma_{Euler} &gt; 0.5\times \sigma_{flyt}\)</span> og må derfor korrigere for Johnson Ostenfeld effekten:
-<br>
-<br>
-$<span class="math notranslate nohighlight">\( \sigma_{kr} = 235\frac{N}{mm^2} \times (1-\frac{235\frac{N}{mm^2}}{4 \times 257.4\frac{N}{mm^2} })=234.7\frac{N}{mm^2} \)</span>$</p>
-<div class="math notranslate nohighlight">
-\[ \downarrow \]</div>
-<p>Kontroll opp mot opptredende spenning: <span class="math notranslate nohighlight">\( \sigma_{kr} \ge \sigma_{max} \)</span> -&gt;  :+1: !!</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
 </div>
+</div>
+</div>
+<section id="spenningsretning-langs-plateretningen">
+<h2>Spenningsretning langs plateretningen<a class="headerlink" href="#spenningsretning-langs-plateretningen" title="Permalink to this heading">#</a></h2>
+<p>Vi definerer her spenningsretningen som virker på kortsiden av platen og har retning parallelt med lengste kant som “langs plateretningen”</p>
+<p>I bulekoeffisientarket svarer dette til tilfelle a), b) og c). <br></p>
+<p>NB! Vi ser her bort fra tilfelle b) da tilfelle c) gir samme verdi for <span class="math notranslate nohighlight">\( \psi = -1 \)</span></p>
 </section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="sett-inn-link-til-bulekoeffsientarket">
+<h1>Sett inn link til bulekoeffsientarket<a class="headerlink" href="#sett-inn-link-til-bulekoeffsientarket" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="c1"># Itererbart intervall for psi fra -1 til 1</span>
+<span class="n">psi_interval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="mi">100</span> <span class="p">)</span>
+
+<span class="n">x_verdier</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">y_verdier</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">psi</span> <span class="ow">in</span> <span class="n">psi_interval</span><span class="p">:</span> 
+    <span class="c1"># Ved strekk </span>
+    <span class="k">if</span> <span class="n">psi</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">bulekoeffisient</span> <span class="o">=</span> <span class="mf">7.6</span> <span class="o">-</span> <span class="mf">6.4</span> <span class="o">*</span> <span class="n">psi</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">psi</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="c1"># Ingen strekk</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">bulekoeffisient</span> <span class="o">=</span> <span class="mf">8.4</span> <span class="o">/</span> <span class="p">(</span> <span class="n">psi</span> <span class="o">+</span> <span class="mf">1.1</span> <span class="p">)</span>
+    <span class="c1"># Lagrer i lister for plot</span>
+    <span class="n">x_verdier</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">psi</span><span class="p">)</span> 
+    <span class="n">y_verdier</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">bulekoeffisient</span><span class="p">)</span>
+
+
+
+<span class="c1"># Plotter</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Bulekoeffisient som funksjon av ψ&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;C [-]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;ψ [-]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_verdier</span> <span class="p">,</span> <span class="n">y_verdier</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="/home.ansatt.ntnu.no/larsenyg/Documents/_repos/skipsdesign4/_build/jupyter_execute/90e80daed53a7b084541bbb839129a242ec9e05fd58c1b86363e4c808942730c.png" src="/home.ansatt.ntnu.no/larsenyg/Documents/_repos/skipsdesign4/_build/jupyter_execute/90e80daed53a7b084541bbb839129a242ec9e05fd58c1b86363e4c808942730c.png" />
+</div>
+</div>
+<section id="klarifisering-beregning-a-bulekoeffisient-c">
+<h2>KLARIFISERING: Beregning a bulekoeffisient <span class="math notranslate nohighlight">\(C\)</span><a class="headerlink" href="#klarifisering-beregning-a-bulekoeffisient-c" title="Permalink to this heading">#</a></h2>
+<p>Det er en feil i løsningsforslag til eksamen Høst 2021 Oppgave 4b (s.15)
+<br>
+<img alt="image.png" src="ressurser/attachment:image.png" /></p>
+<p>Det er oppgitt at strekkspenning i nedre flens er <span class="math notranslate nohighlight">\(\sigma_{nedre} = 188MPa \)</span>, mens trykkspenningen i øvre flens er <span class="math notranslate nohighlight">\(\sigma_{øvre} = 99.4MPa \)</span>. <br> Feilen kommer nå i valg av <span class="math notranslate nohighlight">\(\sigma_1\)</span> og <span class="math notranslate nohighlight">\(\sigma_2\)</span> ut fra formelarket for bulekoeffisienten: <br></p>
+<section id="sigma-1-skal-alltid-vaere-storste-trykkspenning-som-er-beregnet">
+<h3><span class="math notranslate nohighlight">\(\sigma_1\)</span> skal alltid være <em>største</em> trykkspenning som er beregnet.<a class="headerlink" href="#sigma-1-skal-alltid-vaere-storste-trykkspenning-som-er-beregnet" title="Permalink to this heading">#</a></h3>
+<br>
+Siden $\sigma_{øvre}$ er største (og eneste trykkspenning av $\sigma_{øvre}$ og $\sigma_{nedre}$) så skal ligningen være slik: <br> <br>
+<br>
+$$ \sigma_{nedre}  = \psi \times \sigma_{øvre} $$ 
+<br>
+$$ \downarrow $$
+<br>
+$$ -188MPA  = \psi \times 99.4MPa $$ 
+<br>
+$$ \psi = -1.89$$
+<br>
+NB: Trykk og strekk er motsatt rettet og en av de må derfor defineres som negativ: her valgt strekk om negativ (-)
+<p><img alt="image-2.png" src="ressurser/attachment:image-2.png" /></p>
 </section>
 </section>
 </section>
@@ -513,7 +477,7 @@ $<span class="math notranslate nohighlight">\( \sigma_{kr} = 235\frac{N}{mm^2} \
         },
         kernelOptions: {
             name: "python3",
-            path: "./knekking-buling"
+            path: "./ressurser"
         },
         predefinedOutput: true
     }
@@ -549,17 +513,19 @@ $<span class="math notranslate nohighlight">\( \sigma_{kr} = 235\frac{N}{mm^2} \
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bakgrunn">Bakgrunn</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teori">Teori</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#platestripe-som-ekvivalent-bjelke">Platestripe som ekvivalent bjelke</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eulerspenning">Eulerspenning</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#johnson-ostenfeld-korreksjon">Johnson-Ostenfeld korreksjon</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#losningsforslag">Løsningsforslag</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Plotting av <em>bulekoeffisienten</em> <span class="math notranslate nohighlight">\(C\)</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spenningsretning-langs-plateretningen">Spenningsretning langs plateretningen</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sett-inn-link-til-bulekoeffsientarket">Sett inn link til bulekoeffsientarket</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klarifisering-beregning-a-bulekoeffisient-c">KLARIFISERING: Beregning a bulekoeffisient <span class="math notranslate nohighlight">\(C\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sigma-1-skal-alltid-vaere-storste-trykkspenning-som-er-beregnet"><span class="math notranslate nohighlight">\(\sigma_1\)</span> skal alltid være <em>største</em> trykkspenning som er beregnet.</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
+
   </nav></div>
 
 </div></div>

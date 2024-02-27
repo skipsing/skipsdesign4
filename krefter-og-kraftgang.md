@@ -10,12 +10,14 @@ Først skal vi på et overordnet nivå se på hvilke krefter som virker på et s
 hvor mange meter skipet er neddykket i den omkringliggende væsken. 
 
 ### Hydrostatisk trykk 
-Trykket som virker på skroget fra væsken kalles *hyrostatisk trykk*. I ordet *statisk* forstår en at det er XXX  
+Trykket som virker på skroget fra væsken kalles *hydrostatisk trykk*. I ordet *statisk* forstår en at det er XXX  
 
 Trykket er gitt som: 
+
 $$ P = \rho \times g \times h $$
 
 og der 
+
 $$ P = \text{Det hydrostatiske trykket i } [\frac{N}{m^2}] $$
 
 $$ \rho = \text{tettheten i væsken i } [\frac{kg}{m^3}] $$

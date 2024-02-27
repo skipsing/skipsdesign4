@@ -61,7 +61,9 @@ Denne er ofte også benevnt *bulekoeffisienten*. $\nu$ er [*Poisson's ratio*](ht
 Vi står da igjen med følgende uttrykk for Eulerspenning $ \sigma_{Euler} $ i et uavstivet platefelt:
 <br>
 <br>
+
 $$ \sigma_{Euler} = \frac{ C }{1-\nu^2 } \times \frac{\pi^2 \times E}{12} \times (\frac{t}{s})^2 $$
+
 <br>
 <br>
 ### Johnson-Ostenfeld korreksjon 
@@ -130,11 +132,13 @@ $$ C = \frac{8.4}{0 + 1.1} = 7.63 $$
 
 
 Beregner videre Eulerspenningen; 
+
 $$ \sigma_{Euler} = \frac{ 7.63 }{1-0.3^2 } \times \frac{\pi^2 \times 210 000\frac{N}{mm^2}}{12} \times (\frac{8mm}{600mm})^2 = 257.4\frac{N}{mm^2} $$
 
 En ser her at $\sigma_{Euler} > 0.5\times \sigma_{flyt}$ og må derfor korrigere for Johnson Ostenfeld effekten:
 <br>
 <br>
+
 $$ \sigma_{kr} = 235\frac{N}{mm^2} \times (1-\frac{235\frac{N}{mm^2}}{4 \times 257.4\frac{N}{mm^2} })=234.7\frac{N}{mm^2} $$
 
 $$ \downarrow $$

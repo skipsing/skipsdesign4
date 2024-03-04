@@ -59,7 +59,7 @@ Der $C$ er en koeffisient som sier noe om platefeltets aspektforhold og spenning
 
 Denne er ofte også benevnt *bulekoeffisienten*. $\nu$ er [*Poisson's ratio*](https://en.wikipedia.org/wiki/Poisson%27s_ratio), eller også kalt *tverrkontrakssjonstallet*. For stål er $\nu = 0.3 $.
 
-<a href="![myFile.js](https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/ressurser/bulekoeffisienter.pdf)" download>Click to Download</a>
+<a href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/ressurser/bulekoeffisienter.pdf" download>Last ned bulekoeffisientark</a>
 
 Vi står da igjen med følgende uttrykk for Eulerspenning $ \sigma_{Euler} $ i et uavstivet platefelt:
 <br>
@@ -157,5 +157,10 @@ Kontroll opp mot opptredende spenning: $ \sigma_{kr} \ge \sigma_{max} $ ->  :+1:
 
 ````
 
+## Øvinger
+
+I link under finner du noen øvingsoppgaver samt en case for ditt eget prosjekt: 
+
+<a href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/platebuling-oppgaver.ipynb" download>Last ned Jupyter Notebook med øvingsoppgaver</a>
 
 

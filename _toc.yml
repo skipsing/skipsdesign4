@@ -4,8 +4,8 @@
 format: jb-book
 root: intro
 chapters:
-- file: skrogkonstruksjoner
-- file: krefter-og-kraftgang
-- file: globale-krefter
+# - file: skrogkonstruksjoner
+# - file: krefter-og-kraftgang
+# - file: globale-krefter
 - file: knekking-buling/platebuling
 

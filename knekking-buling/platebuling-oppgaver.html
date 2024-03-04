@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Platebuling &#8212; Skipsdesign IV</title>
+    <title>pLatebuling oppgaver &#8212; Skipsdesign IV</title>
   
   
   
@@ -61,6 +61,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'knekking-buling/platebuling-oppgaver';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -155,10 +157,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../skrogkonstruksjoner.html">Skrogkonstruksjoner</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../krefter-og-kraftgang.html">Kraftgang</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../globale-krefter.html">Globale lastpåvirkninger</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../platebuling.html">Platebuling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="platebuling.html">Platebuling</a></li>
 </ul>
 
     </div>
@@ -329,7 +328,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -340,11 +341,24 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Platebuling</h1>
+    <h1>pLatebuling oppgaver</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regneoving-1">Regneøving 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regneoving-2">Regneøving 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regneoving-3">Regneøving 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regneoving-4">Regneøving 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oving-eget-prosjekt">Øving eget prosjekt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oving-eget-prosjekt-del-ii">Øving eget prosjekt Del II</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -354,11 +368,130 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="platebuling">
-<h1>Platebuling<a class="headerlink" href="#platebuling" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="platebuling-oppgaver">
+<h1>pLatebuling oppgaver<a class="headerlink" href="#platebuling-oppgaver" title="Permalink to this heading">#</a></h1>
 <p style="text-align:center;">
     ✍️ Lars Erik Nygård  <a href="mailto:lars.e.nygard@ntnu.no">📧</a> 26.02.2024 📅 
-</p></section>
+</p><section id="regneoving-1">
+<h2>Regneøving 1<a class="headerlink" href="#regneoving-1" title="Permalink to this heading">#</a></h2>
+<p>Vi skal kontrollere platefeltet under for buling. Platefeltet er belastet med en varierende trykkspenning langs kortsiden.
+<br></p>
+<p><img alt="image.png" src="knekking-buling/attachment:image.png" /></p>
+<div class="math notranslate nohighlight">
+\[ E_{modul} = 210 000 \frac{N}{mm^2} \]</div>
+<br>
+<div class="math notranslate nohighlight">
+\[ \sigma_{flyt} = 355 \frac{N}{mm^2} \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Din kode skriver du her. </span>
+<span class="c1">### Prosedyre</span>
+<span class="c1">#- Identifiser spenningstilfelle fra bulekoeffisientarket. </span>
+<span class="c1">#- Beregn spenningsvariasjonen psi  </span>
+<span class="c1">#- Beregn tilhørende bulekoeffisient C. </span>
+<span class="c1">#- Beregn Eulerspenning gitt aspektforhold t/s og materialparameterene E og possions ratio </span>
+<span class="c1">#- Korriger evt for Johnson Ostenfeld </span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Løsningsforslag:
+<br></p>
+<ul class="simple">
+<li><p>Tilfelle a) (eller c) Begge vil lede fram.
+<br></p></li>
+<li><p><span class="math notranslate nohighlight">\(\psi\)</span> = 0
+<br></p></li>
+<li><p><span class="math notranslate nohighlight">\(C = 7.63\)</span>
+<br></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma_{Euler}= 144 \frac{N}{mm^2} \)</span>
+<br></p></li>
+<li><p>Ingen korreksjon -&gt; <span class="math notranslate nohighlight">\(\sigma_{kr} = \sigma_{Euler}\)</span>
+<br></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma_{kr} &lt; \sigma\)</span> -&gt; Platefeltet vil bule.</p></li>
+</ul>
+</section>
+<section id="regneoving-2">
+<h2>Regneøving 2<a class="headerlink" href="#regneoving-2" title="Permalink to this heading">#</a></h2>
+<p>Vi skal kontrollere platefeltet under for buling. Platefeltet er belastet med en varierende trykkspenning langs kortsiden.
+<br>
+<img alt="image.png" src="knekking-buling/attachment:image.png" /></p>
+<div class="math notranslate nohighlight">
+\[ E_{modul} = 210 000 \frac{N}{mm^2} \]</div>
+<br>
+<div class="math notranslate nohighlight">
+\[ \sigma_{flyt} = 355 \frac{N}{mm^2} \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Din kode skriver du her. </span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Løsningsforslag:</p>
+<ul class="simple">
+<li><p>Tilfelle c)</p></li>
+<li><p><span class="math notranslate nohighlight">\( \psi = -0.1333 \)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( C = 1.017 \)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( \sigma_{Euler}= 6.94 \frac{N}{mm^2} \)</span></p></li>
+<li><p>Ingen korreksjon -&gt; <span class="math notranslate nohighlight">\( \sigma_{kr} = \sigma_{Euler} \)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( \sigma_{kr} &lt; \sigma \)</span> -&gt; Platefeltet vil bule.</p></li>
+</ul>
+</section>
+<section id="regneoving-3">
+<h2>Regneøving 3<a class="headerlink" href="#regneoving-3" title="Permalink to this heading">#</a></h2>
+<p>Vi skal kontrollere platefeltet under for buling. Platefeltet er belastet med en varierende trykkspenning langs kortsiden.
+<br>
+<img alt="image.png" src="knekking-buling/attachment:image.png" /></p>
+<div class="math notranslate nohighlight">
+\[ E_{modul} = 210 000 \frac{N}{mm^2} \]</div>
+<br>
+<div class="math notranslate nohighlight">
+\[ \sigma_{flyt} = 355 \frac{N}{mm^2} \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Din kode skriver du her. </span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Løsningsforslag</p>
+<p>…</p>
+</section>
+<section id="regneoving-4">
+<h2>Regneøving 4<a class="headerlink" href="#regneoving-4" title="Permalink to this heading">#</a></h2>
+<p>Vi skal kontrollere platefeltet under for buling. Platefeltet er belastet med en varierende trykkspenning langs kortsiden.
+<br>
+<img alt="image-2.png" src="knekking-buling/attachment:image-2.png" /></p>
+<div class="math notranslate nohighlight">
+\[ E_{modul} = 210 000 \frac{N}{mm^2} \]</div>
+<br>
+<div class="math notranslate nohighlight">
+\[ \sigma_{flyt} = 355 \frac{N}{mm^2} \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Din kode skriver du her. </span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="oving-eget-prosjekt">
+<h2>Øving eget prosjekt<a class="headerlink" href="#oving-eget-prosjekt" title="Permalink to this heading">#</a></h2>
+<p>Du skal nå estimere nødvendig platetykkelse du trenger i hoveddekk og bunn for å sikre at buling ikke inntreffer i ditt prosjekt.</p>
+<p>Bruk stillevannsmomentet du har fra lastkombinasjonene i Maxsurf. Dette skal kombineres med bølgemomentet fra regelverket (Se i DNV-RU-SHIP Pt.3 Ch.4 Sec.3.1):</p>
+<div class="math notranslate nohighlight">
+\[ M_w = 0.19 \times C_w \times L^2 \times B \times C_B \text{ [kNm]} \]</div>
+<p>Og der <span class="math notranslate nohighlight">\( C_W \)</span> er en bølgekoeffisient gitt som:</p>
+<div class="math notranslate nohighlight">
+\[ C_W = 10.75 - \frac{300 - L }{100}^{1.5} \]</div>
+<p>Tips: Gjør skrogbjelken din om til en ekvivalent I-bjelke som er litt enklere å regne på. Bruk <em>xls kalkulatoren</em> du lagde i Styrkeberegninger. “Gjett” på startverdier for tykkelse i dekk, bunn, side og langskipskott.</p>
+</section>
+<section id="oving-eget-prosjekt-del-ii">
+<h2>Øving eget prosjekt Del II<a class="headerlink" href="#oving-eget-prosjekt-del-ii" title="Permalink to this heading">#</a></h2>
+<p>Hva skjer om du snur stiverretningen? Dvs at platefeltet blir rotert 90 grader og langsiden på platen står på tverrs? Anta alle andre variabler likt. Hva blir platetykkelsen nå?</p>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -400,6 +533,25 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regneoving-1">Regneøving 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regneoving-2">Regneøving 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regneoving-3">Regneøving 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regneoving-4">Regneøving 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oving-eget-prosjekt">Øving eget prosjekt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oving-eget-prosjekt-del-ii">Øving eget prosjekt Del II</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

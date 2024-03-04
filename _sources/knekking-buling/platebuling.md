@@ -6,16 +6,17 @@
 
 ## Bakgrunn
 
-Skipskrog er bygd opp av slanke *skallkonstruksjoner* som ofte viser seg å være kritiske for stabilitet og platebuling. Kunnskap om buleteori og kjennskap til hensiktsmessige designgrep for å unngå buling er viktige ferdigheter for skipsingenører. 
+Skipskrog er bygd opp av slanke *skallkonstruksjoner* som ofte viser seg å være kritiske for stabilitet og platebuling. Kunnskap om buleteori og kjennskap til hensiktsmessige designgrep for å unngå buling er derfor viktige ferdigheter for skipsingeniører. 
 
 ## Teori 
 
-Vi har fra tidligere sett at kritisk *knekklast* på en aksialt trykkbelastet bjelke er definert som: 
+Vi har fra klassisk bjelketeori sett at kritisk *knekklast* på en aksialt trykkbelastet bjelke er definert som: 
 
 $$ P_{kr}= \frac{\pi^2 \times E \times I }{L^2} $$
 
-Vi skal nå se på tilsvarende knekkingsfenomen for et platefelt. Ut fra skipets *topologi* så vil størrelsen på et uavstivet platefelt være bestemt av spanteavstanden ($s$), og webrammeavstanden ($l$). 
+Dette er også kalt [*Eulerlasten*](https://en.wikipedia.org/wiki/Euler%27s_critical_load). 
 
+Vi skal nå se på tilsvarende knekkingsfenomen for et platefelt. Ut fra skipets *topologi* så vil størrelsen på et uavstivet platefelt være bestemt av spanteavstanden ($s$), og webrammeavstanden ($l$). 
 
 ```{figure} https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/platefelt-del-av-skip.PNG
 ---
@@ -29,9 +30,8 @@ I platefeltet over så tar vi ut en liten platestripe med bredde $b$ (markert i 
 
 $$ P_{kr} = \frac{\pi^2 \times E \times (\frac{b \times t^3}{12}) }{s^2} $$
 
-Annet arealmoment for det sammensatte bjelkesnittet ($I$) er her erstattet med annet arealmoment for en rektangulær plate $(\frac{b \times t^3}{12})$ der høyde er $b$ og tykkelse er $t$. Videre er lengden $L$ erstattet med $s$, 
+Her er annet arealmoment betraktet for et rektangulært tverrsnitt $(\frac{b \times t^3}{12})$ der høyde er $b$ og tykkelse er $t$. Videre er lengden $L$ erstattet med $s$, 
 se figur under. <br>  
-
 
 ```{figure} https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/platestripe-ekvivalent-bjelke.PNG
 ---
@@ -40,6 +40,7 @@ align: center
 --- 
 Platestripe med bredde *b* som ekvivalent bjelke
 ```
+
 ### Eulerspenning 
 
 Eulerspenningen beregnes videre som knekklast delt på areal: 
@@ -58,12 +59,17 @@ Der $C$ er en koeffisient som sier noe om platefeltets aspektforhold og spenning
 
 Denne er ofte også benevnt *bulekoeffisienten*. $\nu$ er [*Poisson's ratio*](https://en.wikipedia.org/wiki/Poisson%27s_ratio), eller også kalt *tverrkontrakssjonstallet*. For stål er $\nu = 0.3 $.
 
+<a href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/ressurser/bulekoeffisienter.pdf" download>Last ned bulekoeffisientark</a>
+
 Vi står da igjen med følgende uttrykk for Eulerspenning $ \sigma_{Euler} $ i et uavstivet platefelt:
 <br>
 <br>
+
 $$ \sigma_{Euler} = \frac{ C }{1-\nu^2 } \times \frac{\pi^2 \times E}{12} \times (\frac{t}{s})^2 $$
+
 <br>
 <br>
+
 ### Johnson-Ostenfeld korreksjon 
 
 Der slankhetsforholdet (lengde over stivhet) blir svært høyt er man nødt til å introdusere "Johnson-Ostenfelds korreksjonsfaktor". I figur under ser en at denne korreksjonsfaktoren interpolerer mellom flytspenningen og Eulerspenningen. 
@@ -99,10 +105,12 @@ $$ \sigma_{kr} = \sigma_{flyt} \times (1-\frac{\sigma_{flyt}}{4 \times\sigma_{Eu
 ```
 Vi benytter anledningen til å vise et regneeksempel der prosedyren over er brukt. 
 
-```{admonition} Regneeksempel 
+````{admonition} Regneeksempel platebuling 
 :class: note
 
-Vi skal kontrollere platefeltet som skissert under for buling. Platefeltet er belastet med en varierende trykkspenning langs kortsiden. 
+**Problemformulering**
+
+Vi skal kontrollere det uavstivede platefeltet som skissert under for buling. Platefeltet er belastet med en varierende trykkspenning langs kortsiden. 
 
 ```{figure} https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/eksempel-platebuling.PNG
 ---
@@ -118,7 +126,7 @@ $$ E_{modul} = 210 000 \frac{N}{mm^2} $$
 
 $$ \sigma_{flyt} = 235 \frac{N}{mm^2} $$
 
-#### Løsningsforslag ####
+**Løsningsforslag**
 
 En ser her at  $\sigma_{2} = 0\frac{N}{mm^2}$, og $\psi$ blir dermed også $0$.  
 
@@ -130,15 +138,29 @@ $$ C = \frac{8.4}{0 + 1.1} = 7.63 $$
 
 
 Beregner videre Eulerspenningen; 
+
 $$ \sigma_{Euler} = \frac{ 7.63 }{1-0.3^2 } \times \frac{\pi^2 \times 210 000\frac{N}{mm^2}}{12} \times (\frac{8mm}{600mm})^2 = 257.4\frac{N}{mm^2} $$
 
 En ser her at $\sigma_{Euler} > 0.5\times \sigma_{flyt}$ og må derfor korrigere for Johnson Ostenfeld effekten:
 <br>
 <br>
+
 $$ \sigma_{kr} = 235\frac{N}{mm^2} \times (1-\frac{235\frac{N}{mm^2}}{4 \times 257.4\frac{N}{mm^2} })=234.7\frac{N}{mm^2} $$
 
-$$ \downarrow $$
+<br>
+
+Vi har at $ \sigma_{max} =100\frac{N}{mm^2} $
+
+<br>
 
 Kontroll opp mot opptredende spenning: $ \sigma_{kr} \ge \sigma_{max} $ ->  :+1: !!
 
-```
+````
+
+## Øvinger
+
+I link under finner du noen øvingsoppgaver samt en case for ditt eget prosjekt: 
+
+<a href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/platebuling-oppgaver.ipynb" download>Last ned Jupyter Notebook med øvingsoppgaver</a>
+
+

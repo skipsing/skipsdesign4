@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'knekking-buling/platebuling';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Globale lastpåvirkninger" href="../globale-krefter.html" />
+    <link rel="prev" title="Skipsdesign IV - Skrogkonstruksjon" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -158,9 +158,6 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../skrogkonstruksjoner.html">Skrogkonstruksjoner</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../krefter-og-kraftgang.html">Kraftgang</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../globale-krefter.html">Globale lastpåvirkninger</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Platebuling</a></li>
 </ul>
 
@@ -359,12 +356,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teori">Teori</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#platestripe-som-ekvivalent-bjelke">Platestripe som ekvivalent bjelke</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eulerspenning">Eulerspenning</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#johnson-ostenfeld-korreksjon">Johnson-Ostenfeld korreksjon</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#losningsforslag">Løsningsforslag</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#johnson-ostenfeld-korreksjon">Johnson-Ostenfeld korreksjon</a></li>
 </ul>
 </li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ovinger">Øvinger</a></li>
 </ul>
             </nav>
         </div>
@@ -383,18 +378,19 @@ document.write(`
 </p>
 <section id="bakgrunn">
 <h2>Bakgrunn<a class="headerlink" href="#bakgrunn" title="Permalink to this heading">#</a></h2>
-<p>Skipskrog er bygd opp av slanke <em>skallkonstruksjoner</em> som ofte viser seg å være kritiske for stabilitet og platebuling. Kunnskap om buleteori og kjennskap til hensiktsmessige designgrep for å unngå buling er viktige ferdigheter for skipsingenører.</p>
+<p>Skipskrog er bygd opp av slanke <em>skallkonstruksjoner</em> som ofte viser seg å være kritiske for stabilitet og platebuling. Kunnskap om buleteori og kjennskap til hensiktsmessige designgrep for å unngå buling er derfor viktige ferdigheter for skipsingeniører.</p>
 </section>
 <section id="teori">
 <h2>Teori<a class="headerlink" href="#teori" title="Permalink to this heading">#</a></h2>
-<p>Vi har fra tidligere sett at kritisk <em>knekklast</em> på en aksialt trykkbelastet bjelke er definert som:</p>
+<p>Vi har fra klassisk bjelketeori sett at kritisk <em>knekklast</em> på en aksialt trykkbelastet bjelke er definert som:</p>
 <div class="math notranslate nohighlight">
 \[ P_{kr}= \frac{\pi^2 \times E \times I }{L^2} \]</div>
+<p>Dette er også kalt <a class="reference external" href="https://en.wikipedia.org/wiki/Euler%27s_critical_load"><em>Eulerlasten</em></a>.</p>
 <p>Vi skal nå se på tilsvarende knekkingsfenomen for et platefelt. Ut fra skipets <em>topologi</em> så vil størrelsen på et uavstivet platefelt være bestemt av spanteavstanden (<span class="math notranslate nohighlight">\(s\)</span>), og webrammeavstanden (<span class="math notranslate nohighlight">\(l\)</span>).</p>
 <figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/platefelt-del-av-skip.PNG"><img alt="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/platefelt-del-av-skip.PNG" src="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/platefelt-del-av-skip.PNG" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Uavstivet platefelt som del av en større skrogkonstruksjon</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Uavstivet platefelt som del av en større skrogkonstruksjon</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="platestripe-som-ekvivalent-bjelke">
@@ -402,12 +398,12 @@ document.write(`
 <p>I platefeltet over så tar vi ut en liten platestripe med bredde <span class="math notranslate nohighlight">\(b\)</span> (markert i rødt over). Platestripen betrakter vi som en søyle og anvender knekklastformelen for som for bjelker <span class="math notranslate nohighlight">\(P_{kr}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[ P_{kr} = \frac{\pi^2 \times E \times (\frac{b \times t^3}{12}) }{s^2} \]</div>
-<p>Annet arealmoment for det sammensatte bjelkesnittet (<span class="math notranslate nohighlight">\(I\)</span>) er her erstattet med annet arealmoment for en rektangulær plate <span class="math notranslate nohighlight">\((\frac{b \times t^3}{12})\)</span> der høyde er <span class="math notranslate nohighlight">\(b\)</span> og tykkelse er <span class="math notranslate nohighlight">\(t\)</span>. Videre er lengden <span class="math notranslate nohighlight">\(L\)</span> erstattet med <span class="math notranslate nohighlight">\(s\)</span>,
+<p>Her er annet arealmoment betraktet for et rektangulært tverrsnitt <span class="math notranslate nohighlight">\((\frac{b \times t^3}{12})\)</span> der høyde er <span class="math notranslate nohighlight">\(b\)</span> og tykkelse er <span class="math notranslate nohighlight">\(t\)</span>. Videre er lengden <span class="math notranslate nohighlight">\(L\)</span> erstattet med <span class="math notranslate nohighlight">\(s\)</span>,
 se figur under. <br></p>
 <figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/platestripe-ekvivalent-bjelke.PNG"><img alt="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/platestripe-ekvivalent-bjelke.PNG" src="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/platestripe-ekvivalent-bjelke.PNG" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Platestripe med bredde <em>b</em> som ekvivalent bjelke</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Platestripe med bredde <em>b</em> som ekvivalent bjelke</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -425,12 +421,14 @@ se figur under. <br></p>
 \[ \frac{ C }{1-\nu^2 } \]</div>
 <p>Der <span class="math notranslate nohighlight">\(C\)</span> er en koeffisient som sier noe om platefeltets aspektforhold og spenningsbilde.</p>
 <p>Denne er ofte også benevnt <em>bulekoeffisienten</em>. <span class="math notranslate nohighlight">\(\nu\)</span> er <a class="reference external" href="https://en.wikipedia.org/wiki/Poisson%27s_ratio"><em>Poisson’s ratio</em></a>, eller også kalt <em>tverrkontrakssjonstallet</em>. For stål er <span class="math notranslate nohighlight">\(\nu = 0.3 \)</span>.</p>
+<p><a href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/ressurser/bulekoeffisienter.pdf" download>Last ned bulekoeffisientark</a></p>
 <p>Vi står da igjen med følgende uttrykk for Eulerspenning <span class="math notranslate nohighlight">\( \sigma_{Euler} \)</span> i et uavstivet platefelt:
 <br>
-<br>
-$<span class="math notranslate nohighlight">\( \sigma_{Euler} = \frac{ C }{1-\nu^2 } \times \frac{\pi^2 \times E}{12} \times (\frac{t}{s})^2 \)</span>$
-<br>
 <br></p>
+<div class="math notranslate nohighlight">
+\[ \sigma_{Euler} = \frac{ C }{1-\nu^2 } \times \frac{\pi^2 \times E}{12} \times (\frac{t}{s})^2 \]</div>
+<br>
+<br>
 </section>
 <section id="johnson-ostenfeld-korreksjon">
 <h3>Johnson-Ostenfeld korreksjon<a class="headerlink" href="#johnson-ostenfeld-korreksjon" title="Permalink to this heading">#</a></h3>
@@ -438,7 +436,7 @@ $<span class="math notranslate nohighlight">\( \sigma_{Euler} = \frac{ C }{1-\nu
 <figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/johnson-ostenfeld-korreksjon.PNG"><img alt="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/johnson-ostenfeld-korreksjon.PNG" src="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/johnson-ostenfeld-korreksjon.PNG" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Johnson-Ostenfeld korreksjon for høye <em>slankhetsforhold</em></span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Johnson-Ostenfeld korreksjon for høye <em>slankhetsforhold</em></span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>En ser fra figur over at denne korreksjonen inntreffer <strong>kun</strong> om <span class="math notranslate nohighlight">\(\sigma_{Euler} &gt; 0.5\times \sigma_{flyt}
@@ -462,42 +460,46 @@ $<span class="math notranslate nohighlight">\( \sigma_{Euler} = \frac{ C }{1-\nu
 </div>
 <p>Vi benytter anledningen til å vise et regneeksempel der prosedyren over er brukt.</p>
 <div class="note admonition">
-<p class="admonition-title">Regneeksempel</p>
-<p>Vi skal kontrollere platefeltet som skissert under for buling. Platefeltet er belastet med en varierende trykkspenning langs kortsiden.</p>
+<p class="admonition-title">Regneeksempel platebuling </p>
+<p><strong>Problemformulering</strong></p>
+<p>Vi skal kontrollere det uavstivede platefeltet som skissert under for buling. Platefeltet er belastet med en varierende trykkspenning langs kortsiden.</p>
 <figure class="align-center" id="id4">
 <a class="reference internal image-reference" href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/eksempel-platebuling.PNG"><img alt="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/eksempel-platebuling.PNG" src="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/eksempel-platebuling.PNG" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">uavstivet platefelt utsatt for lineært varierende trykkspenning langs kortsiden</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">uavstivet platefelt utsatt for lineært varierende trykkspenning langs kortsiden</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-</div>
 <p>Videre er følgende opplysinger gitt:</p>
 <div class="math notranslate nohighlight">
 \[ E_{modul} = 210 000 \frac{N}{mm^2} \]</div>
 <div class="math notranslate nohighlight">
 \[ \sigma_{flyt} = 235 \frac{N}{mm^2} \]</div>
-<section id="losningsforslag">
-<h4>Løsningsforslag<a class="headerlink" href="#losningsforslag" title="Permalink to this heading">#</a></h4>
+<p><strong>Løsningsforslag</strong></p>
 <p>En ser her at  <span class="math notranslate nohighlight">\(\sigma_{2} = 0\frac{N}{mm^2}\)</span>, og <span class="math notranslate nohighlight">\(\psi\)</span> blir dermed også <span class="math notranslate nohighlight">\(0\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[ \downarrow \]</div>
 <p>Dette er et tilfelle a), og som gir bulekoeffisient:</p>
 <div class="math notranslate nohighlight">
 \[ C = \frac{8.4}{0 + 1.1} = 7.63 \]</div>
-<p>Beregner videre Eulerspenningen;
-$<span class="math notranslate nohighlight">\( \sigma_{Euler} = \frac{ 7.63 }{1-0.3^2 } \times \frac{\pi^2 \times 210 000\frac{N}{mm^2}}{12} \times (\frac{8mm}{600mm})^2 = 257.4\frac{N}{mm^2} \)</span>$</p>
+<p>Beregner videre Eulerspenningen;</p>
+<div class="math notranslate nohighlight">
+\[ \sigma_{Euler} = \frac{ 7.63 }{1-0.3^2 } \times \frac{\pi^2 \times 210 000\frac{N}{mm^2}}{12} \times (\frac{8mm}{600mm})^2 = 257.4\frac{N}{mm^2} \]</div>
 <p>En ser her at <span class="math notranslate nohighlight">\(\sigma_{Euler} &gt; 0.5\times \sigma_{flyt}\)</span> og må derfor korrigere for Johnson Ostenfeld effekten:
 <br>
-<br>
-$<span class="math notranslate nohighlight">\( \sigma_{kr} = 235\frac{N}{mm^2} \times (1-\frac{235\frac{N}{mm^2}}{4 \times 257.4\frac{N}{mm^2} })=234.7\frac{N}{mm^2} \)</span>$</p>
+<br></p>
 <div class="math notranslate nohighlight">
-\[ \downarrow \]</div>
+\[ \sigma_{kr} = 235\frac{N}{mm^2} \times (1-\frac{235\frac{N}{mm^2}}{4 \times 257.4\frac{N}{mm^2} })=234.7\frac{N}{mm^2} \]</div>
+<br>
+<p>Vi har at <span class="math notranslate nohighlight">\( \sigma_{max} =100\frac{N}{mm^2} \)</span></p>
+<br>
 <p>Kontroll opp mot opptredende spenning: <span class="math notranslate nohighlight">\( \sigma_{kr} \ge \sigma_{max} \)</span> -&gt;  :+1: !!</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
 </div>
 </section>
 </section>
+<section id="ovinger">
+<h2>Øvinger<a class="headerlink" href="#ovinger" title="Permalink to this heading">#</a></h2>
+<p>I link under finner du noen øvingsoppgaver samt en case for ditt eget prosjekt:</p>
+<p><a href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/platebuling-oppgaver.ipynb" download>Last ned Jupyter Notebook med øvingsoppgaver</a></p>
 </section>
 </section>
 
@@ -533,12 +535,12 @@ $<span class="math notranslate nohighlight">\( \sigma_{kr} = 235\frac{N}{mm^2} \
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../globale-krefter.html"
+       href="../intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Globale lastpåvirkninger</p>
+        <p class="prev-next-title">Skipsdesign IV - Skrogkonstruksjon</p>
       </div>
     </a>
 </div></div>
@@ -563,12 +565,10 @@ $<span class="math notranslate nohighlight">\( \sigma_{kr} = 235\frac{N}{mm^2} \
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teori">Teori</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#platestripe-som-ekvivalent-bjelke">Platestripe som ekvivalent bjelke</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eulerspenning">Eulerspenning</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#johnson-ostenfeld-korreksjon">Johnson-Ostenfeld korreksjon</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#losningsforslag">Løsningsforslag</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#johnson-ostenfeld-korreksjon">Johnson-Ostenfeld korreksjon</a></li>
 </ul>
 </li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ovinger">Øvinger</a></li>
 </ul>
   </nav></div>
 

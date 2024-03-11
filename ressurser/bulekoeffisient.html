@@ -158,6 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../knekking-buling/platebuling.html">Platebuling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../knekking-buling/platebuling2.html">Platebuling forts</a></li>
 </ul>
 
     </div>
@@ -351,19 +352,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Plotting av <em>bulekoeffisienten</em> <span class="math notranslate nohighlight">\(C\)</span></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spenningsretning-langs-plateretningen">Spenningsretning langs plateretningen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sporsmal">Spørsmål</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spenning-parallelt-med-kortsiden">Spenning parallelt med kortsiden</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sett-inn-link-til-bulekoeffsientarket">Sett inn link til bulekoeffsientarket</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klarifisering-beregning-a-bulekoeffisient-c">KLARIFISERING: Beregning a bulekoeffisient <span class="math notranslate nohighlight">\(C\)</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sigma-1-skal-alltid-vaere-storste-trykkspenning-som-er-beregnet"><span class="math notranslate nohighlight">\(\sigma_1\)</span> skal alltid være <em>største</em> trykkspenning som er beregnet.</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -395,10 +387,7 @@ Vi skal her benytte oss av to biblioteker som ikke er del av standardbiblioteket
 <p>Vi definerer her spenningsretningen som virker på kortsiden av platen og har retning parallelt med lengste kant som “langs plateretningen”</p>
 <p>I bulekoeffisientarket svarer dette til tilfelle a), b) og c). <br></p>
 <p>NB! Vi ser her bort fra tilfelle b) da tilfelle c) gir samme verdi for <span class="math notranslate nohighlight">\( \psi = -1 \)</span></p>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="sett-inn-link-til-bulekoeffsientarket">
-<h1>Sett inn link til bulekoeffsientarket<a class="headerlink" href="#sett-inn-link-til-bulekoeffsientarket" title="Permalink to this heading">#</a></h1>
+<p><img alt="buleark" src="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/bulekoeffisient_langs.PNG" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -424,7 +413,7 @@ Vi skal her benytte oss av to biblioteker som ikke er del av standardbiblioteket
 
 <span class="c1"># Plotter</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Bulekoeffisient som funksjon av ψ&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Bulekoeffisient der spenningsretning går parallelt med stiverretning&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;C [-]&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;ψ [-]&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_verdier</span> <span class="p">,</span> <span class="n">y_verdier</span><span class="p">)</span>
@@ -433,31 +422,89 @@ Vi skal her benytte oss av to biblioteker som ikke er del av standardbiblioteket
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="/home.ansatt.ntnu.no/larsenyg/Documents/_repos/skipsdesign4/_build/jupyter_execute/90e80daed53a7b084541bbb839129a242ec9e05fd58c1b86363e4c808942730c.png" src="/home.ansatt.ntnu.no/larsenyg/Documents/_repos/skipsdesign4/_build/jupyter_execute/90e80daed53a7b084541bbb839129a242ec9e05fd58c1b86363e4c808942730c.png" />
+<img alt="/home.ansatt.ntnu.no/larsenyg/Documents/_repos/skipsdesign4/_build/jupyter_execute/c0a52988e26018920a2e4be6dd7e1e9d38980192637144ab51b2dc8e971838a2.png" src="/home.ansatt.ntnu.no/larsenyg/Documents/_repos/skipsdesign4/_build/jupyter_execute/c0a52988e26018920a2e4be6dd7e1e9d38980192637144ab51b2dc8e971838a2.png" />
 </div>
 </div>
-<section id="klarifisering-beregning-a-bulekoeffisient-c">
-<h2>KLARIFISERING: Beregning a bulekoeffisient <span class="math notranslate nohighlight">\(C\)</span><a class="headerlink" href="#klarifisering-beregning-a-bulekoeffisient-c" title="Permalink to this heading">#</a></h2>
-<p>Det er en feil i løsningsforslag til eksamen Høst 2021 Oppgave 4b (s.15)
-<br>
-<img alt="image.png" src="ressurser/attachment:image.png" /></p>
-<p>Det er oppgitt at strekkspenning i nedre flens er <span class="math notranslate nohighlight">\(\sigma_{nedre} = 188MPa \)</span>, mens trykkspenningen i øvre flens er <span class="math notranslate nohighlight">\(\sigma_{øvre} = 99.4MPa \)</span>. <br> Feilen kommer nå i valg av <span class="math notranslate nohighlight">\(\sigma_1\)</span> og <span class="math notranslate nohighlight">\(\sigma_2\)</span> ut fra formelarket for bulekoeffisienten: <br></p>
-<section id="sigma-1-skal-alltid-vaere-storste-trykkspenning-som-er-beregnet">
-<h3><span class="math notranslate nohighlight">\(\sigma_1\)</span> skal alltid være <em>største</em> trykkspenning som er beregnet.<a class="headerlink" href="#sigma-1-skal-alltid-vaere-storste-trykkspenning-som-er-beregnet" title="Permalink to this heading">#</a></h3>
-<br>
-Siden $\sigma_{øvre}$ er største (og eneste trykkspenning av $\sigma_{øvre}$ og $\sigma_{nedre}$) så skal ligningen være slik: <br> <br>
-<br>
-$$ \sigma_{nedre}  = \psi \times \sigma_{øvre} $$ 
-<br>
-$$ \downarrow $$
-<br>
-$$ -188MPA  = \psi \times 99.4MPa $$ 
-<br>
-$$ \psi = -1.89$$
-<br>
-NB: Trykk og strekk er motsatt rettet og en av de må derfor defineres som negativ: her valgt strekk om negativ (-)
-<p><img alt="image-2.png" src="ressurser/attachment:image-2.png" /></p>
 </section>
+<section id="sporsmal">
+<h2>Spørsmål<a class="headerlink" href="#sporsmal" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Vil bulekapasiteten til platefeltet her være avhengig av stiveravstanden <span class="math notranslate nohighlight">\(s\)</span> ? , og hva med webrammeavstanden <span class="math notranslate nohighlight">\(l\)</span> ?</p></li>
+<li></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="spenning-parallelt-med-kortsiden">
+<h2>Spenning parallelt med kortsiden<a class="headerlink" href="#spenning-parallelt-med-kortsiden" title="Permalink to this heading">#</a></h2>
+<p><img alt="buleark" src="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/bulekoeffisient_tverrs.PNG" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="c1"># Itererbart intervall for psi fra -1 til 1</span>
+<span class="n">psi_interval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span> <span class="o">-</span><span class="mi">1</span> <span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="mi">100</span> <span class="p">)</span>
+
+<span class="c1"># aspektforhold plate</span>
+<span class="n">s_over_l</span> <span class="o">=</span> <span class="mf">0.25</span>
+
+<span class="n">C_e0</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span> <span class="n">s_over_l</span> <span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="p">((</span><span class="mf">2.1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span> <span class="mi">0</span> <span class="o">+</span> <span class="mf">1.1</span><span class="p">))</span>
+
+<span class="n">x_verdier</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">y_verdier</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">psi</span> <span class="ow">in</span> <span class="n">psi_interval</span><span class="p">:</span> 
+    <span class="c1"># Ved strekk </span>
+    <span class="k">if</span> <span class="n">psi</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">s_over_l</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span> <span class="p">):</span> 
+            <span class="n">C_f</span> <span class="o">=</span> <span class="mi">24</span> <span class="o">*</span> <span class="p">(</span><span class="n">s_over_l</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> 
+
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="n">C_f</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">16</span> <span class="o">*</span> <span class="p">(</span> <span class="n">s_over_l</span> <span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">*</span> <span class="p">(</span> <span class="n">s_over_l</span> <span class="p">)</span> <span class="o">**</span> <span class="mi">4</span> 
+        
+        <span class="n">bulekoeffisient</span> <span class="o">=</span> <span class="p">(</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">psi</span><span class="p">)</span> <span class="p">)</span> <span class="o">*</span> <span class="n">C_e0</span> <span class="o">-</span> <span class="nb">abs</span><span class="p">(</span><span class="n">psi</span><span class="p">)</span> <span class="o">*</span> <span class="n">C_f</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">*</span> <span class="nb">abs</span><span class="p">(</span><span class="n">psi</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">psi</span><span class="p">)</span> <span class="p">)</span> <span class="o">+</span> <span class="p">(</span> <span class="n">s_over_l</span> <span class="p">)</span><span class="o">**</span><span class="mi">2</span> 
+
+<span class="c1">#bulekoeffisient = ( 1 + psi ) * C_e0 - psi * C_f + 10 * psi * ( 1 + psi ) + ( s_over_l )**2 </span>
+        
+    <span class="c1"># Ingen strekk</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">bulekoeffisient</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span> <span class="n">s_over_l</span> <span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="p">((</span><span class="mf">2.1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span> <span class="n">psi</span> <span class="o">+</span> <span class="mf">1.1</span><span class="p">))</span>
+        
+    <span class="c1"># Lagrer i lister for plot</span>
+    <span class="n">x_verdier</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">psi</span><span class="p">)</span> 
+    <span class="n">y_verdier</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">bulekoeffisient</span><span class="p">)</span>
+
+
+<span class="c1"># Plotter</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Bulekoeffisient der spenningsretning går på tvers av stiverretning&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;C [-]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;ψ [-]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_verdier</span> <span class="p">,</span> <span class="n">y_verdier</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;matplotlib&#39;</span><span class="p">,</span> <span class="s1">&#39;inline&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Itererbart intervall for psi fra -1 til 1</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">psi_interval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span> <span class="o">-</span><span class="mi">1</span> <span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="mi">100</span> <span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># aspektforhold plate</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">s_over_l</span> <span class="o">=</span> <span class="mf">0.25</span>
+
+<span class="ne">NameError</span>: name &#39;np&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -510,19 +557,10 @@ NB: Trykk og strekk er motsatt rettet og en av de må derfor defineres som negat
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Plotting av <em>bulekoeffisienten</em> <span class="math notranslate nohighlight">\(C\)</span></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spenningsretning-langs-plateretningen">Spenningsretning langs plateretningen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sporsmal">Spørsmål</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spenning-parallelt-med-kortsiden">Spenning parallelt med kortsiden</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sett-inn-link-til-bulekoeffsientarket">Sett inn link til bulekoeffsientarket</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klarifisering-beregning-a-bulekoeffisient-c">KLARIFISERING: Beregning a bulekoeffisient <span class="math notranslate nohighlight">\(C\)</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sigma-1-skal-alltid-vaere-storste-trykkspenning-som-er-beregnet"><span class="math notranslate nohighlight">\(\sigma_1\)</span> skal alltid være <em>største</em> trykkspenning som er beregnet.</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>

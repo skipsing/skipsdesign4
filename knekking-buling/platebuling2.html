@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Platebuling oppgaver &#8212; Skipsdesign IV</title>
+    <title>Platebuling forts &#8212; Skipsdesign IV</title>
   
   
   
@@ -63,9 +63,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'knekking-buling/platebuling-oppgaver';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'knekking-buling/platebuling2';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Platebuling" href="platebuling.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -156,9 +157,9 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="platebuling.html">Platebuling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="platebuling2.html">Platebuling forts</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Platebuling forts</a></li>
 </ul>
 
     </div>
@@ -230,7 +231,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/skipsing/skipsdesign4/issues/new?title=Issue%20on%20page%20%2Fknekking-buling/platebuling-oppgaver.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/skipsing/skipsdesign4/issues/new?title=Issue%20on%20page%20%2Fknekking-buling/platebuling2.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -260,7 +261,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/knekking-buling/platebuling-oppgaver.ipynb" target="_blank"
+      <li><a href="../_sources/knekking-buling/platebuling2.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -270,7 +271,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -342,7 +343,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Platebuling oppgaver</h1>
+    <h1>Platebuling forts</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -352,12 +353,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regneoving-1">Regneøving 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regneoving-2">Regneøving 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regneoving-3">Regneøving 3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regneoving-4">Regneøving 4</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oving-eget-prosjekt">Øving eget prosjekt</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oving-eget-prosjekt-del-ii">Øving eget prosjekt Del II</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#korrektive-tiltak-ved-buling">Korrektive tiltak ved buling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bulekoeffisienten-c">Bulekoeffisienten C</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#materialkonstantenten">Materialkonstantenten</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#slankheten">Slankheten</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introdusere-bulestivere">Introdusere <em>bulestivere</em></a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -369,128 +371,73 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="platebuling-oppgaver">
-<h1>Platebuling oppgaver<a class="headerlink" href="#platebuling-oppgaver" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="platebuling-forts">
+<h1>Platebuling forts<a class="headerlink" href="#platebuling-forts" title="Permalink to this heading">#</a></h1>
 <p style="text-align:center;">
-    ✍️ Lars Erik Nygård  <a href="mailto:lars.e.nygard@ntnu.no">📧</a> 26.02.2024 📅 
-</p><section id="regneoving-1">
-<h2>Regneøving 1<a class="headerlink" href="#regneoving-1" title="Permalink to this heading">#</a></h2>
-<p>Vi skal kontrollere platefeltet under for buling. Platefeltet er belastet med en varierende trykkspenning langs kortsiden.
-<br></p>
-<p><img alt="image.png" src="knekking-buling/attachment:image.png" /></p>
+    ✍️ Lars Erik Nygård  <a href="mailto:lars.e.nygard@ntnu.no">📧</a> 10.03.2024 📅 
+</p>
+<section id="korrektive-tiltak-ved-buling">
+<h2>Korrektive tiltak ved buling<a class="headerlink" href="#korrektive-tiltak-ved-buling" title="Permalink to this heading">#</a></h2>
+<p>Vi har bulespenningsformelen gitt ved:</p>
 <div class="math notranslate nohighlight">
-\[ E_{modul} = 210 000 \frac{N}{mm^2} \]</div>
-<br>
+\[ \sigma_{Euler} = \frac{ C }{1-\nu^2 } \times \frac{\pi^2 \times E}{12} \times (\frac{t}{s})^2\]</div>
+<p>Vi deler denne formelen gjerne i 3 deler:</p>
+<section id="bulekoeffisienten-c">
+<h3>Bulekoeffisienten C<a class="headerlink" href="#bulekoeffisienten-c" title="Permalink to this heading">#</a></h3>
+<p>Bulekoeffisienten bestemmes på bakgrunn av stiverretning og spenningsfordeling over platefeltet.</p>
+<p><a href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/ressurser/bulekoeffisienter.pdf" download>Last ned bulekoeffisientark</a></p>
+<p>I figur under er bulekoeffisienten plottet for spenningsretning parallelt med stiverretningen og der <span class="math notranslate nohighlight">\( \psi \)</span> varierer mellom -1 og 1.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/bulekoeffisient_langs_plot.PNG"><img alt="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/bulekoeffisient_langs_plot.PNG" src="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/bulekoeffisient_langs_plot.PNG" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Bulekoeffisient for spenning parallelt med stiverretningen. Ved jevnt trykk er minste verdi 4.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p><a href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/ressurser/bulekoeffisient.ipynb" download>Plottet er generert i en Jupyter Notebook (nedlastingslink) </a></p>
+<p>Videre følger i figur under bulekoeffisienten plottet for spenningsretning på tverrs av stiverretningen og der <span class="math notranslate nohighlight">\( \psi \)</span> varierer mellom -1 og 1.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/bulekoeffisient_tvers_plot.PNG"><img alt="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/bulekoeffisient_tvers_plot.PNG" src="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/bulekoeffisient_tvers_plot.PNG" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Bulekoeffisient for spenning på tvers av stiverretningen. Ved jevnt trykk er minste verdi ned mot 1.25.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Ved å sammenligne tilfellene over for jevnt trykk ser en at C vil kunne økes fra typisk 1.25 til 4 ved å snu avstivningsretningen! (Ufordelaktig å ha trykkspenning langs langsiden)
+Dette er ganske vanlig på skipskonstruksjoner å da la avstivningsretningen være langskips på grunn av trykkspenningene fra de globale momentene.</p>
+</section>
+<section id="materialkonstantenten">
+<h3>Materialkonstantenten<a class="headerlink" href="#materialkonstantenten" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
-\[ \sigma_{flyt} = 355 \frac{N}{mm^2} \]</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Din kode skriver du her. </span>
-<span class="c1">### Prosedyre</span>
-<span class="c1">#- Identifiser spenningstilfelle fra bulekoeffisientarket. </span>
-<span class="c1">#- Beregn spenningsvariasjonen psi  </span>
-<span class="c1">#- Beregn tilhørende bulekoeffisient C. </span>
-<span class="c1">#- Beregn Eulerspenning gitt aspektforhold t/s og materialparameterene E og possions ratio </span>
-<span class="c1">#- Korriger evt for Johnson Ostenfeld </span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Løsningsforslag:
-<br></p>
+\[ \frac{\pi^2 \times E}{ ({1-\nu^2) } \times 12} \]</div>
+<p>For stål 189800, og kun avhengig av E-modul. Ingen betydning i flytspenningen.</p>
+</section>
+<section id="slankheten">
+<h3>Slankheten<a class="headerlink" href="#slankheten" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[ (\frac{t}{s})^2 \]</div>
+<p>Avhengig av platetykkelsen og korteste avstand til avstivningselementer.</p>
 <ul class="simple">
-<li><p>Tilfelle a) (eller c) Begge vil lede fram.
-<br></p></li>
-<li><p><span class="math notranslate nohighlight">\(\psi\)</span> = 0
-<br></p></li>
-<li><p><span class="math notranslate nohighlight">\(C = 7.63\)</span>
-<br></p></li>
-<li><p><span class="math notranslate nohighlight">\(\sigma_{Euler}= 144 \frac{N}{mm^2} \)</span>
-<br></p></li>
-<li><p>Ingen korreksjon -&gt; <span class="math notranslate nohighlight">\(\sigma_{kr} = \sigma_{Euler}\)</span>
-<br></p></li>
-<li><p><span class="math notranslate nohighlight">\(\sigma_{kr} &lt; \sigma\)</span> -&gt; Platefeltet vil bule.</p></li>
+<li><p>En økning i platetykkelse vil som regel være meget vektintensivt, i forhold til å minske stiveravstanden s.</p></li>
+<li><p>Det motsatte gjelder når produksjonsvennlighet er ønskelig.</p></li>
 </ul>
 </section>
-<section id="regneoving-2">
-<h2>Regneøving 2<a class="headerlink" href="#regneoving-2" title="Permalink to this heading">#</a></h2>
-<p>Vi skal kontrollere platefeltet under for buling. Platefeltet er belastet med en varierende trykkspenning langs kortsiden.
-<br>
-<img alt="image.png" src="knekking-buling/attachment:image.png" /></p>
-<div class="math notranslate nohighlight">
-\[ E_{modul} = 210 000 \frac{N}{mm^2} \]</div>
-<br>
-<div class="math notranslate nohighlight">
-\[ \sigma_{flyt} = 355 \frac{N}{mm^2} \]</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Din kode skriver du her. </span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Løsningsforslag:</p>
-<ul class="simple">
-<li><p>Tilfelle c)</p></li>
-<li><p><span class="math notranslate nohighlight">\( \psi = -0.1333 \)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\( C = 1.017 \)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\( \sigma_{Euler}= 6.94 \frac{N}{mm^2} \)</span></p></li>
-<li><p>Ingen korreksjon -&gt; <span class="math notranslate nohighlight">\( \sigma_{kr} = \sigma_{Euler} \)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\( \sigma_{kr} &lt; \sigma \)</span> -&gt; Platefeltet vil bule.</p></li>
-</ul>
+<section id="introdusere-bulestivere">
+<h3>Introdusere <em>bulestivere</em><a class="headerlink" href="#introdusere-bulestivere" title="Permalink to this heading">#</a></h3>
+<p>I noen tilfeller kan det være slik at avstivningsretningen blir styrt av andre designparametere.
+En kan da introdusere et ekstra sett med stivere, kalt <em>bulestivere</em>. Dette er avstivningselementer som har en eneste funksjon og det er å dele platefeltet inn i mindre deler. Merk at siden den er opplagret i primærstiverne vil den ikke bidra <em>styrkemessig</em>.</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/bulestiver_tegning.PNG"><img alt="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/bulestiver_tegning.PNG" src="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/bulestiver_tegning.PNG" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Horisontal bulestiver midt på platefeltet på et vertikalavstivet skott.</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Det kan tilogmed lønne seg å introdusere flere rader med bulestivere. Under ser man et skjermbilde av en 3d modell der 2 rader er vist.</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/bulestiver_modell.PNG"><img alt="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/bulestiver_modell.PNG" src="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/bulestiver_modell.PNG" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Dobbel rad med bulestivere på et vertikalavstivet skott.</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
-<section id="regneoving-3">
-<h2>Regneøving 3<a class="headerlink" href="#regneoving-3" title="Permalink to this heading">#</a></h2>
-<p>Vi skal kontrollere platefeltet under for buling. Platefeltet er belastet med en varierende trykkspenning langs kortsiden.
-<br>
-<img alt="image.png" src="knekking-buling/attachment:image.png" /></p>
-<div class="math notranslate nohighlight">
-\[ E_{modul} = 210 000 \frac{N}{mm^2} \]</div>
-<br>
-<div class="math notranslate nohighlight">
-\[ \sigma_{flyt} = 355 \frac{N}{mm^2} \]</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Din kode skriver du her. </span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Løsningsforslag</p>
-<p>…</p>
-</section>
-<section id="regneoving-4">
-<h2>Regneøving 4<a class="headerlink" href="#regneoving-4" title="Permalink to this heading">#</a></h2>
-<p>Vi skal kontrollere platefeltet under for buling. Platefeltet er belastet med en varierende trykkspenning langs kortsiden.
-<br>
-<img alt="image-2.png" src="knekking-buling/attachment:image-2.png" /></p>
-<div class="math notranslate nohighlight">
-\[ E_{modul} = 210 000 \frac{N}{mm^2} \]</div>
-<br>
-<div class="math notranslate nohighlight">
-\[ \sigma_{flyt} = 355 \frac{N}{mm^2} \]</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Din kode skriver du her. </span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="oving-eget-prosjekt">
-<h2>Øving eget prosjekt<a class="headerlink" href="#oving-eget-prosjekt" title="Permalink to this heading">#</a></h2>
-<p>Du skal nå estimere nødvendig platetykkelse du trenger i hoveddekk og bunn for å sikre at buling ikke inntreffer i ditt prosjekt.</p>
-<p>Bruk stillevannsmomentet du har fra lastkombinasjonene i Maxsurf. Dette skal kombineres med bølgemomentet fra regelverket (Se i DNV-RU-SHIP Pt.3 Ch.4 Sec.3.1):</p>
-<div class="math notranslate nohighlight">
-\[ M_w = 0.19 \times C_w \times L^2 \times B \times C_B \text{ [kNm]} \]</div>
-<p>Og der <span class="math notranslate nohighlight">\( C_W \)</span> er en bølgekoeffisient gitt som:</p>
-<div class="math notranslate nohighlight">
-\[ C_W = 10.75 - (\frac{300 - L }{100})^{1.5} \]</div>
-<p>Tips: Gjør skrogbjelken din om til en ekvivalent I-bjelke som er litt enklere å regne på. Bruk <em>xls kalkulatoren</em> du lagde i Styrkeberegninger. “Gjett” på startverdier for tykkelse i dekk, bunn, side og langskipskott.</p>
-</section>
-<section id="oving-eget-prosjekt-del-ii">
-<h2>Øving eget prosjekt Del II<a class="headerlink" href="#oving-eget-prosjekt-del-ii" title="Permalink to this heading">#</a></h2>
-<p>Hva skjer om du snur stiverretningen? Dvs at platefeltet blir rotert 90 grader og langsiden på platen står på tverrs? Anta alle andre variabler likt. Hva blir platetykkelsen nå?</p>
 </section>
 </section>
 
@@ -525,6 +472,15 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="platebuling.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Platebuling</p>
+      </div>
+    </a>
 </div></div>
   
 </div>
@@ -543,12 +499,13 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regneoving-1">Regneøving 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regneoving-2">Regneøving 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regneoving-3">Regneøving 3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regneoving-4">Regneøving 4</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oving-eget-prosjekt">Øving eget prosjekt</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oving-eget-prosjekt-del-ii">Øving eget prosjekt Del II</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#korrektive-tiltak-ved-buling">Korrektive tiltak ved buling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bulekoeffisienten-c">Bulekoeffisienten C</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#materialkonstantenten">Materialkonstantenten</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#slankheten">Slankheten</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introdusere-bulestivere">Introdusere <em>bulestivere</em></a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

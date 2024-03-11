@@ -117,7 +117,7 @@ Vi skal kontrollere det uavstivede platefeltet som skissert under for buling. Pl
 scale: 50 %
 align: center
 --- 
-uavstivet platefelt utsatt for lineært varierende trykkspenning langs kortsiden 
+Uavstivet platefelt utsatt for lineært varierende trykkspenning langs kortsiden 
 
 ```
 Videre er følgende opplysinger gitt: 

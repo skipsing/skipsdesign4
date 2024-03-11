@@ -79,3 +79,10 @@ align: center
 --- 
 Dobbel rad med bulestivere på et vertikalavstivet skott. 
 ```
+
+## Øvinger
+
+I link under finner du noen øvingsoppgaver som ser på vektkonsekvens av ulike avstivninger 
+
+<a href="https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/platebuling-oppgaver2.ipynb" download>Last ned Jupyter Notebook med øvingsoppgaver</a>
+

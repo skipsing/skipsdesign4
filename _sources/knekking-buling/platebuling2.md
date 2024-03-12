@@ -20,7 +20,7 @@ Bulekoeffisienten bestemmes på bakgrunn av stiverretning og spenningsfordeling 
 
 I figur under er bulekoeffisienten plottet for spenningsretning parallelt med stiverretningen og der $ \psi $ varierer mellom -1 og 1. 
 
-```{figure} https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/bulekoeffisient_langs_plot.PNG
+```{figure} https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/bulekoeffisient_lang_plot.PNG
 ---
 scale: 50 %
 align: center
@@ -32,7 +32,7 @@ Bulekoeffisient for spenning parallelt med stiverretningen. Ved jevnt trykk er m
 
 Videre følger i figur under bulekoeffisienten plottet for spenningsretning på tverrs av stiverretningen og der $ \psi $ varierer mellom -1 og 1. 
 
-```{figure} https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/bulekoeffisient_tvers_plot.PNG
+```{figure} https://cdn.jsdelivr.net/gh/skipsing/skipsdesign4/knekking-buling/images/bulekoeffisient_tver_plot.PNG
 ---
 scale: 50 %
 align: center
